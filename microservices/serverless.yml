@@ -1,0 +1,45 @@
+service: shoreline-assignment
+
+#package:
+#  individually: true
+#
+#plugins:
+#  - serverless-offline
+#  - serverless-python-requirements
+
+provider:
+  name: aws
+  runtime: pyton3.8
+  region: ap-south-1
+  memorySize: 128
+  timeout: 30
+  versionFunctions: False
+  ecr:
+    scanOnPush: false
+    images:
+      shoreline-rest:
+        path: .
+        file: Dockerfile_Lambda
+        buildArgs:
+          SECRET_KEY: "<<secret-key>>"
+
+
+functions:
+  shoreline_rest_function:
+    name: shoreline_rest_function
+#    package:
+#      patterns:
+#        - "microservices/src/**"
+#    handler: app.handler.handler
+    image:
+      name: shoreline-rest
+    events:
+      - http:
+          method: any
+          path: /{proxy+}
+          allowCredentials: false
+
+
+#custom:
+#  pythonRequirements:
+#    dockerizePip: true

@@ -1,0 +1,13 @@
+FROM amazon/aws-lambda-python:3.8
+
+COPY ./src/project_files ${LAMBDA_TASK_ROOT}
+
+COPY ./src/project_files/requirements.txt .
+
+RUN pip3 install --no-cache-dir --upgrade -r requirements.txt -t "${LAMBDA_TASK_ROOT}"
+
+ARG SECRET_KEY
+ENV SECRET_KEY=$SECRET_KEY
+
+CMD ["handler.handler"]
+

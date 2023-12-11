@@ -14,7 +14,7 @@ from router import status_router, device_router, sensor_router
 #
 # logger = logging.getLogger(__name__)
 
-app = FastAPI(debug=True)
+app = FastAPI()
 
 
 @app.middleware("http")

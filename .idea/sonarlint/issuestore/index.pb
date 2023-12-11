@@ -1,4 +1,21 @@
 
-:
-
-.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+H
+microservices/Dockerfile,5/f/5f76f95d356065247417c62c3debefcd58252e29
+O
+microservices/Dockerfile_Lambda,2/a/2a8ffc4978ac01890e37419316bdd40ca689df2e
+P
+ microservices/docker-compose.yml,b/9/b9b436e54814e70407c8c0e4c47737ba6c86354a
+W
+'microservices/src/project_files/main.py,6/4/64eb4014c5aac881db40f98b078a1e4cdef37713
+Z
+*microservices/src/project_files/handler.py,8/7/87cd68ad523511cad4b61f7e4d4690577aae948a
+g
+7microservices/src/project_files/router/device_router.py,a/e/ae7fe1f33ae24853d6f044bdac75bb8266670b41
+g
+7microservices/src/project_files/router/sensor_router.py,b/b/bbad79180882f396dee42cfb6f18bfe3a7ffa9b9
+g
+7microservices/src/project_files/router/status_router.py,7/0/70bc1af192341958410a5fecedbeaffe9ad05ae9
+_
+/microservices/Shreloine.postman_collection.json,f/5/f5eb6764fe3478c67a8f45e53be25f791396880d
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

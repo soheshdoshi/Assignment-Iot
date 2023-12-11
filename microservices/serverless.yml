@@ -21,7 +21,7 @@ provider:
         path: .
         file: Dockerfile_Lambda
         buildArgs:
-          SECRET_KEY: "<<secret-key>>"
+          SECRET_KEY: "<<SECRET_KEY>>"
 
 
 functions:
@@ -34,10 +34,7 @@ functions:
     image:
       name: shoreline-rest
     events:
-      - http:
-          method: any
-          path: /{proxy+}
-          allowCredentials: false
+      - httpApi: '*'
 
 
 #custom:
